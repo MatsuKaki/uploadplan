@@ -21,7 +21,9 @@ export class AppComponent {
     await worker.initialize("fr");
     const {
       data: { text }
-    } = await worker.recognize("https://jeroen.github.io/images/testocr.png");
+    } = await worker.recognize(
+      "https://stackblitz.com/files/ionic-v4-kality/github/MatsuKaki/uploadplan/master/src/app/20200623110946_1_PDV-INDICE NOTAIRE 1 - CAGES A ET B - TECHNIQUES A001 (1).JPG"
+    );
     this.ocrResult = text;
     console.log(text);
     await worker.terminate();
